@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import "compass";
+body { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0B132B;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {git c
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.introScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 300px;
+  animation: bubble;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  animation-duration: 3s;
+}
+
+
+/*SVG CSS stuff*/
+
+.hair {
+  fill: #E5FFEB;
+  position: absolute;
+  z-index: 5;
+  /* fill: #A5FFB9; */
+}
+
+
+/*CSS animation*/
+
+.hairBackground {
+  background-color: #0B132B;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 298px;
+  z-index: 4;
+  animation-name: bar;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  animation-duration: 4s;
+}
+
+
+/* qq dad thinks it looks better without the countdown
+
+#loading {
+  display: inline-block;
+  font-size: 18px;
+  z-index: 50;
+}
+#time{
+}
+
+*/
+
+
+/*the green behind the transition*/
+
+.filler {
+  z-index: 3;
+  position: absolute;
+  height: 468px;
+  width: 300px;
+  background-color: #C4FFD2;
+}
+
+@keyframes bar {
+  0% {
+    height: 2px;
+  }
+  100% {
+    height: 467px;
+  }
+}
+
+
+/*Button
+.buttonEnter {
+  top: 10px;
+  position: relative;
+  z-index: 15px;
+  background: #0B132B;
+  margin-left: 90px;
+  margin-bottom: 200px;
+  height: 45px;
+  width: 120px;
+  border: none;
+  color: #E5FFEB;
+  font-size: 16px;
+  animation: bubble 10s ease infinite;
+} 
+*/
+
+@keyframes bubble {
+  30% {
+    transform: none;
+  }
+  35% {
+    transform: scale(1.02);
+  }
+  40% {
+    transform: scale(0.97);
+  }
+  45% {
+    transform: scale(1.01);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translate(-400px, -100px) scale(.65);
+    width: none;
+  }
+}
