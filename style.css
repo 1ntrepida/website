@@ -18,7 +18,18 @@ body {
   width: 600px;
   height: 400px;
   background-color:#C4FFD2;
+  color: #0B132B;
 }
+
+h1 {
+  text-align: center;
+}
+
+.bio {
+  margin-left : 40px;
+  margin-right : 40px;
+}
+
 
 .fade-in {
   opacity: 0;
