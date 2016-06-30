@@ -7,9 +7,8 @@ body {
   color: #0B132B;
   font-family: 'PT Sans', sans-serif;
 }
-
 .contentPanel{
-  z-index: -100;
+  z-index: -10;
   opacity: 0;
   animation: fadeIn ease-in 1;
   animation-duration: 2s;
@@ -20,17 +19,13 @@ body {
   background-color:#C4FFD2;
   color: #0B132B;
 }
-
 h1{
   text-align: center;
 }
-
 .bio {
   margin-left : 40px;
   margin-right : 40px;
 }
-
-
 .fade-in {
   opacity: 0;
   /* make things invisible upon start */
@@ -46,7 +41,6 @@ h1{
   -moz-animation-duration: 2s;
   animation-duration: 2s;
 }
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -73,41 +67,15 @@ h1{
 }
 
 .introScreen {
+  margin: 0 auto;
   position: absolute;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
   animation: bubble;
   animation-fill-mode: forwards;
   animation-delay: 5s;
   animation-duration: 3s;
+  top: 20px;
+  margin-left:-180px;
 }
-
-
-/*SVG CSS stuff*/
-
-.hair {
-  fill: #E5FFEB;
-  position: absolute;
-  z-index: 5;
-  /* fill: #A5FFB9; */
-}
-
-
-/*CSS animation*/
-
-.hairBackground {
-  background-color: #0B132B;
-  margin-top: 1px;
-  margin-left: 1px;
-  width: 298px;
-  z-index: 4;
-  animation-name: bar;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
-  animation-duration: 4s;
-}
-
 
 /* qq dad thinks it looks better without the countdown
 
@@ -119,24 +87,39 @@ h1{
 #time{
 }
 
-*/
-
-
 /*the green behind the transition*/
 .filler {
-  z-index: 3;
+  z-index: 8;
   position: absolute;
   height: 468px;
   width: 300px;
   background-color: #C4FFD2;
 }
+.hair {
+  fill: #E5FFEB;
+  position: absolute;
+  z-index: 10;
+  /* fill: #A5FFB9; */
+}
+.hairBackground {
+  background-color: #0B132B;
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 298px;
+  z-index: 9;
+  animation-name: bar;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  animation-duration: 4s;
+}
 
 @keyframes bar {
   0% {
-    height: 2px;
+    height: 0px;
   }
   100% {
-    height: 467px;
+    height: 466px;
   }
 }
 
@@ -173,7 +156,10 @@ h1{
   50% {
     transform: scale(1);
   }
-  100% {
+  70% {
     width: none;
+  }
+  100% {
+    transform: scale(0.6); 
   }
 }
