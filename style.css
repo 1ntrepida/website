@@ -66,6 +66,43 @@ h1{
   }
 }
 
+.squares{
+  margin-left: 200px;
+  z-index: 200;
+  display: inline-block
+}
+
+.icons {
+  color:#fff; /*#3B476B*/
+  background-color: #0B132B;
+  border-radius:4px;
+  text-align:center;
+  text-decoration:none;
+  font-family:fontawesome;
+  position: relative;
+  display: inline-block;
+  width:60px;
+  height:28px;
+  padding-top:12px;
+}
+
+.icons:hover {
+  background-color:#3B476B;
+}
+
+.icons:nth-of-type(1):before {
+content:'\f003';
+}
+.icons:nth-of-type(2):before {
+content:'\f08c';
+}
+.icons:nth-of-type(3):before {
+content:'\f092';
+}
+.icons:nth-of-type(4):before {
+content:'\f16d';
+}
+
 .introScreen {
   margin: 0 auto;
   position: absolute;
