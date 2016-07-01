@@ -1,13 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
 @import "compass";
-body {
-  display: flex;
+.bodybody {
+  margin-left:300px;
   justify-content: center;
   align-items: center;
   color: #0B132B;
   font-family: 'PT Sans', sans-serif;
+  background-color: #E5FFEB;
 }
-.contentPanel{
+
+.contentPanel {
   z-index: -10;
   opacity: 0;
   animation: fadeIn ease-in 1;
@@ -16,16 +18,19 @@ body {
   animation-fill-mode: forwards;
   width: 650px;
   height: 800px;
-  background-color:#C4FFD2;
+  background-color: #C4FFD2;
   color: #0B132B;
 }
-h1{
+
+h1 {
   text-align: center;
 }
+
 .bio {
-  margin-left : 40px;
-  margin-right : 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
+
 .fade-in {
   opacity: 0;
   /* make things invisible upon start */
@@ -41,6 +46,7 @@ h1{
   -moz-animation-duration: 2s;
   animation-duration: 2s;
 }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -49,6 +55,7 @@ h1{
     opacity: 1;
   }
 }
+
 @-moz-keyframes fadeIn {
   from {
     opacity: 0;
@@ -57,6 +64,7 @@ h1{
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -65,6 +73,7 @@ h1{
     opacity: 1;
   }
 }
+
 
 .squares{
   margin-left: 200px;
@@ -103,6 +112,7 @@ content:'\f092';
 content:'\f16d';
 }
 
+
 .introScreen {
   margin: 0 auto;
   position: absolute;
@@ -111,8 +121,9 @@ content:'\f16d';
   animation-delay: 5s;
   animation-duration: 3s;
   top: 20px;
-  margin-left:-180px;
+  margin-left: -180px;
 }
+
 
 /* qq dad thinks it looks better without the countdown
 
@@ -125,6 +136,7 @@ content:'\f16d';
 }
 
 /*the green behind the transition*/
+
 .filler {
   z-index: 8;
   position: absolute;
@@ -132,12 +144,14 @@ content:'\f16d';
   width: 300px;
   background-color: #C4FFD2;
 }
+
 .hair {
   fill: #E5FFEB;
   position: absolute;
   z-index: 10;
   /* fill: #A5FFB9; */
 }
+
 .hairBackground {
   background-color: #0B132B;
   position: absolute;
@@ -177,6 +191,7 @@ content:'\f16d';
   animation: bubble 10s ease infinite;
 } 
 */
+
 @keyframes bubble {
   30% {
     transform: none;
@@ -197,6 +212,6 @@ content:'\f16d';
     width: none;
   }
   100% {
-    transform: scale(0.6); 
+    transform: scale(0.6);
   }
 }
